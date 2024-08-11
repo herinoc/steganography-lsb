@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steganografi LSB</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Steganografi LSB</h1>
+        <div class="input-section">
+            <p><strong>Langkah 1:</strong> Pilih gambar PNG atau BMP yang akan digunakan untuk menyembunyikan pesan.</p>
+            <input type="file" id="imageInput" accept="image/png, image/bmp">
+
+            <p><strong>Langkah 2:</strong> Pilih file teks (.txt) yang berisi pesan yang akan disembunyikan.</p>
+            <input type="file" id="messageInput" accept="text/plain">
+
+            <button onclick="hideMessage()">Sembunyikan Pesan</button>
+        </div>
+        <canvas id="canvas" style="display: none;"></canvas>
+        <div class="output-section">
+            <h2>Hasil</h2>
+            <img id="outputImage" src="" alt="Output Image">
+            <textarea id="extractedMessage" readonly placeholder="Pesan yang diekstrak akan muncul di sini..."></textarea>
+        </div>
+        <button onclick="extractMessage()">Ekstrak Pesan</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
